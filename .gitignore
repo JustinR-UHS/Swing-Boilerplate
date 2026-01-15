@@ -1,0 +1,15 @@
+# NetBeans
+nbproject/private/
+build/
+dist/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Java
+*.class
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
