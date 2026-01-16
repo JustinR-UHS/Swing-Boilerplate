@@ -1,7 +1,6 @@
 
 package models;
 import java.util.Arrays;
-import java.util.ArrayList;
 
 //A class that defines a hamburger and it's toppings
 //Provides methods for manipulating toppings, calculating the price, and getting the description
@@ -66,17 +65,11 @@ public class Drinks {
     public double get_price() {
         double cost = DRINK_COST;
         switch(this.sizeChoice) {
-            case "Small":
-                cost += SMALL_COST;
-                break;
-            case "Medium":
-                cost += MEDIUM_COST;
-                break;
-            case "Large":
-                cost += LARGE_COST;
-                break;
-            default:
-                break;
+            case "Small" -> cost += SMALL_COST;
+            case "Medium" -> cost += MEDIUM_COST;
+            case "Large" -> cost += LARGE_COST;
+            default -> {
+            }
         }
         return cost;
     }
@@ -95,16 +88,7 @@ public class Drinks {
     
     @Override
     public String toString() {
-        String output = "A hamburger with ";
-        for (int i = 0; i < toppings.size() - 1; i++) {
-            output += toppings.get(i).toLowerCase() + ", ";
-        }
-        if (toppings.size() > 1) {
-            output += "and ";
-        }
-        output += toppings.get(toppings.size() - 1).toLowerCase();
-        output = output.substring(0, output.length());
-        output += " on a sesame seed bun";
+        String output = (sizeChoice + " " + drinkChoice);
         return output;
     }
 }
