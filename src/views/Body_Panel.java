@@ -25,13 +25,13 @@ public class Body_Panel extends JPanel{
         JLabel lblDesserts = new JLabel("Desserts Panel is showing");
         dessertsPanel.add(lblDesserts);
         
-        Drinks_Controller drinksController = new Drinks_Controller();
-        Drinks_Panel drinksPanel = drinksController.getView();
+        //* Drinks_Controller drinksController = new Drinks_Controller();
+        //* Drinks_Panel drinksPanel = drinksController.getView();
         
         add(hotdogPanel, "hot dogs");
         add(hamburgerPanel, "hamburgers");
         add(dessertsPanel, "desserts");
-        add(drinksPanel, "drinks");
+        //* add(drinksPanel, "drinks");
     }
     
     public void setPanel(String panelName) {
